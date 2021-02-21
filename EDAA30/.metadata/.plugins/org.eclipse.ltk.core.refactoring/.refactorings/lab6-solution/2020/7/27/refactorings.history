@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TestSimpleHashMap.java&apos; to &apos;lab6/src/test&apos;&#x0A;- Original project: &apos;lab6-solution&apos;&#x0A;- Destination element: &apos;lab6/src/test&apos;&#x0A;- Original element: &apos;test.TestSimpleHashMap.java&apos;" description="Copy compilation unit" destination="=lab6/src&lt;test" element1="/src&lt;test{TestSimpleHashMap.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1593763105053" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;test.TestFifoQueue&apos; to &apos;TestBinarySearchTree&apos;&#x0A;- Original project: &apos;lab5-solution&apos;&#x0A;- Original element: &apos;test.TestFifoQueue&apos;&#x0A;- Renamed element: &apos;test.TestBinarySearchTree&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TestFifoQueue&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;test{TestFifoQueue.java[TestFifoQueue" matchStrategy="1" name="TestBinarySearchTree" qualified="false" references="true" similarDeclarations="false" stamp="1593725124791" textual="false" version="1.0"/>
+</session>

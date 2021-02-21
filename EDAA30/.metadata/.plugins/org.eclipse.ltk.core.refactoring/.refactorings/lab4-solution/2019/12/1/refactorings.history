@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;lab4-solution-ny/src&apos;&#x0A;- Original project: &apos;lab4-solution&apos;&#x0A;- Destination element: &apos;lab4-solution-ny/src&apos;&#x0A;- Original elements:&#x0A;     koch&#x0A;     fractal&#x0A;     mountain" description="Copy folders" destination="=lab4-solution-ny/src" element1="src/koch" element2="src/fractal" element3="src/mountain" files="0" flags="589830" folders="3" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1577719286661" units="0" version="1.0"/>
+</session>

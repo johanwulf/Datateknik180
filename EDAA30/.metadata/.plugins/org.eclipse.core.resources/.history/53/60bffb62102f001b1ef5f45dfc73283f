@@ -1,0 +1,8 @@
+package bst;
+
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.NoSuchElementException;
+
+public class TestBinarySearchTree {
+    
+}
