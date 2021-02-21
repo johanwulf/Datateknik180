@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane fx:controller="gui.TopTabView"  xmlns:fx="http://javafx.com/fxml/1" styleClass="root">
+<center>
+	<TabPane tabClosingPolicy="UNAVAILABLE">
+    <tabs>
+        <Tab text="Login">
+                <fx:include fx:id="aLoginTab" source="loginTab.fxml"/>
+        </Tab>
+        <Tab text="Book">
+                <fx:include fx:id="aBookingTab" source="bookingTab.fxml"/>
+        </Tab>
+        <Tab text="Reservations" fx:id="reservationTab">
+                <fx:include fx:id="aReservationTab" source="reservationsTab.fxml"/>
+        </Tab>
+    </tabs>
+    </TabPane>
+</center>
+</BorderPane>
+
