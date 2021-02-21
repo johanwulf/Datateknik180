@@ -1,0 +1,28 @@
+plugins {
+  id 'java'
+}
+
+
+sourceCompatibility = targetCompatibility = '1.8'
+
+compileJava.options.encoding = compileTestJava.options.encoding = 'UTF-8'
+compileJava.options.debug = true
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation 'com.google.guava:guava:28.2-jre'
+  testImplementation 'junit:junit:4.12'
+  testImplementation 'com.google.truth:truth:1.0'
+}
+
+test {
+  // Log passed/failed tests in the console (see also build/reports/tests):
+  testLogging.events 'passed', 'failed'
+
+  testLogging.exceptionFormat = 'full' // Full error output for test failures.
+
+  dependsOn 'cleanTest'  // This causes tests to always be re-run.
+}

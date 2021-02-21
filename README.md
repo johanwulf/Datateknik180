@@ -9,6 +9,7 @@
       <a href="#getting-started">Courses</a>
       <ul>
         <li><a href="#edaa30">EDAA30 - Programmering i Java - fortsättningskurs<a></li>
+        <li><a href="#edaa30">EDAF25 - Objektorienterad modellering och design<a></li>
         <li><a href="#etsf20">ETSF20 - Programvaruutveckling för Stora Projekt</a></li>
         <li><a href="#edaf20">EDAF20 - Database Technology</a></li>
       </ul>
@@ -25,6 +26,10 @@ This repository contains the code which was made during my time at Lunds Teknisk
 This is the second Java course taken. The course further developed on the methods learned in the first course, EDAA10. Other than object oriented programming, we also learned about data structures and algorithms.
 
 * [Course website](http://cs.lth.se/edaa30/)
+
+## EDAF25
+## Objektorienterad modellering och design
+The part of this course that is in this repository contains graphs in Java.
 
 ## ETSF20
 ### Programvaruutveckling för Stora Projekt
