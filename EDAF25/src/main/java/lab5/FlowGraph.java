@@ -18,7 +18,7 @@ public class FlowGraph {
    * Creates a flow graph with the edges listed in the second parameter.
    *
    * @param vertexCount number of vertices in the graph
-   * @param edges list of directed edges
+   * @param edges       list of directed edges
    */
   public FlowGraph(int vertexCount, FlowEdge... edges) {
     Preconditions.checkArgument(vertexCount >= 2,

@@ -66,9 +66,9 @@ public class Lab2 {
       visited.add(current);
 
       Collection<Integer> neighbours = g.neighbours(current);
-      if(neighbours.contains(v)) {
+      if (neighbours.contains(v)) {
         return true;
-      } 
+      }
 
       for (Integer i : neighbours) {
         if (!visited.contains(i)) {
@@ -85,4 +85,3 @@ public class Lab2 {
     return Collections.emptyList();
   }
 }
-

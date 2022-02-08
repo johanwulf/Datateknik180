@@ -10,7 +10,8 @@ import static com.google.common.truth.Truth.assertThat;
 public class TestWordEdges {
 
   /** Test that WordGraph loads the words from the word file. */
-  @Test public void test7words() throws IOException {
+  @Test
+  public void test7words() throws IOException {
     WordGraph graph = new WordGraph(Paths.get("words-2.txt"), new OneLetterDiff());
     assertThat(graph.neighbours("green")).containsExactly("greet");
     assertThat(graph.neighbours("greet")).containsExactly("green", "great");

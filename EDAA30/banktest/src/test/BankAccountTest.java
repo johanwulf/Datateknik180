@@ -47,20 +47,20 @@ class BankAccountTest {
 		Exception exception = assertThrows(IllegalArgumentException.class, () -> theAccount.withdraw(200));
 		assertEquals("Overdraft", exception.getMessage());
 	}
-	
+
 	@Test
 	void testDepositrNegativeArgumentrDraft() {
 		assertThrows(IllegalArgumentException.class, () -> theAccount.deposit(-200));
 	}
-	
+
 	@Test
 	void testWithdrawNegativArgumentrDraft() {
 		assertThrows(IllegalArgumentException.class, () -> theAccount.withdraw(-200));
 	}
-	
+
 	@Test
 	void testManyDepositAndWithdrawals() {
-		Random rand = new Random(); 
+		Random rand = new Random();
 		int expectedBalance = 0;
 		for (int i = 0; i < 100; i++) {
 			int n = rand.nextInt(1000) + 500;
@@ -72,9 +72,8 @@ class BankAccountTest {
 			int n = rand.nextInt(200) + 1;
 			theAccount.withdraw(n);
 			expectedBalance -= n;
-		}	
+		}
 		assertEquals(expectedBalance, theAccount.getBalance(), "Wrong balance after many withrawals");
-		
-	}
 
+	}
 }

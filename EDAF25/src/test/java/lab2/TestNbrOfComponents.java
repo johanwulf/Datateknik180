@@ -21,25 +21,25 @@ public class TestNbrOfComponents {
 
   @Test
   public final void testTwoVerticesOneComponent() {
-    Graph<Integer> g = new SimpleGraph(2, new int[][]{
-        {0, 1}, {1, 0},
+    Graph<Integer> g = new SimpleGraph(2, new int[][] {
+        { 0, 1 }, { 1, 0 },
     });
     assertThat(Lab2.nbrOfComponents(g)).isEqualTo(1);
   }
 
   @Test
   public final void testThreeVerticesOneComponent() {
-    Graph<Integer> g = new SimpleGraph(3, new int[][]{
-        {0, 1}, {1, 0},
-        {0, 2}, {2, 0},
+    Graph<Integer> g = new SimpleGraph(3, new int[][] {
+        { 0, 1 }, { 1, 0 },
+        { 0, 2 }, { 2, 0 },
     });
     assertThat(Lab2.nbrOfComponents(g)).isEqualTo(1);
   }
 
   @Test
   public final void testThreeVerticesTwoComponents() {
-    Graph<Integer> g = new SimpleGraph(3, new int[][]{
-        {1, 2}, {2, 1},
+    Graph<Integer> g = new SimpleGraph(3, new int[][] {
+        { 1, 2 }, { 2, 1 },
     });
     assertThat(Lab2.nbrOfComponents(g)).isEqualTo(2);
   }
@@ -47,12 +47,12 @@ public class TestNbrOfComponents {
   @Test
   public final void testFiveVerticesOneComponent() {
     Graph<Integer> g = new SimpleGraph(5,
-        new int[][]{
-            {0, 1}, {1, 0},
-            {0, 2}, {2, 0},
-            {1, 2}, {2, 1},
-            {0, 3}, {3, 0},
-            {3, 4}, {4, 3},
+        new int[][] {
+            { 0, 1 }, { 1, 0 },
+            { 0, 2 }, { 2, 0 },
+            { 1, 2 }, { 2, 1 },
+            { 0, 3 }, { 3, 0 },
+            { 3, 4 }, { 4, 3 },
         });
     assertThat(Lab2.nbrOfComponents(g)).isEqualTo(1);
   }
@@ -60,11 +60,11 @@ public class TestNbrOfComponents {
   @Test
   public final void testFiveVerticesTwoComponents() {
     Graph<Integer> g = new SimpleGraph(5,
-        new int[][]{
-            {0, 1}, {1, 0},
-            {0, 2}, {2, 0},
-            {1, 2}, {2, 1},
-            {3, 4}, {4, 3},
+        new int[][] {
+            { 0, 1 }, { 1, 0 },
+            { 0, 2 }, { 2, 0 },
+            { 1, 2 }, { 2, 1 },
+            { 3, 4 }, { 4, 3 },
         });
     assertThat(Lab2.nbrOfComponents(g)).isEqualTo(2);
   }

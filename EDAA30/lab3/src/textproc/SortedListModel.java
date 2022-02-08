@@ -7,11 +7,11 @@ import javax.swing.AbstractListModel;
 
 public class SortedListModel<E> extends AbstractListModel<E> {
 	private List<E> list;
-	
+
 	public SortedListModel(List<E> list) {
-        this.list = list;
-    }
-	
+		this.list = list;
+	}
+
 	public void sort(Comparator<E> comp) {
 		list.sort(comp);
 		fireContentsChanged(this, 0, list.size());

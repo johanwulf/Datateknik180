@@ -29,7 +29,8 @@ public class Mountain extends Fractal {
         fractalMountain(turtle, order, length, a, b, c, 30);
     }
 
-    public void fractalMountain(TurtleGraphics turtle, int order, double length, Point a, Point b, Point c, double dev) {
+    public void fractalMountain(TurtleGraphics turtle, int order, double length, Point a, Point b, Point c,
+            double dev) {
         if (order == 0) {
             turtle.moveTo(a.getX(), a.getY());
             turtle.forwardTo(c.getX(), c.getY());
@@ -42,27 +43,27 @@ public class Mountain extends Fractal {
             Point AC = createPoint(a, c, yShift);
             Point BC = createPoint(b, c, yShift);
 
-            fractalMountain(turtle, order-1, length/2, AB, AC, BC, dev/2);
-            fractalMountain(turtle, order-1, length/2, AB, BC, b, dev/2);
-            fractalMountain(turtle, order-1, length/2, AB, a, AC, dev/2);
-            fractalMountain(turtle, order-1, length/2, AC, c, BC, dev/2);
+            fractalMountain(turtle, order - 1, length / 2, AB, AC, BC, dev / 2);
+            fractalMountain(turtle, order - 1, length / 2, AB, BC, b, dev / 2);
+            fractalMountain(turtle, order - 1, length / 2, AB, a, AC, dev / 2);
+            fractalMountain(turtle, order - 1, length / 2, AC, c, BC, dev / 2);
         }
     }
 
     private Point createPoint(Point a, Point b, int yShift) {
         Side tempSide = new Side(a, b);
 
-        if(triangelMap.containsKey(tempSide)) {
-			Point excistingPoint = triangelMap.get(tempSide);
-			triangelMap.remove(tempSide);
-			return excistingPoint;
-		} else {
-            int x = ((a.getX() + b.getX())/2);
-            int y = ((a.getY()+b.getY())/2) + yShift;
+        if (triangelMap.containsKey(tempSide)) {
+            Point excistingPoint = triangelMap.get(tempSide);
+            triangelMap.remove(tempSide);
+            return excistingPoint;
+        } else {
+            int x = ((a.getX() + b.getX()) / 2);
+            int y = ((a.getY() + b.getY()) / 2) + yShift;
 
-            Point newPoint = new Point(x,y);
+            Point newPoint = new Point(x, y);
             triangelMap.put(tempSide, newPoint);
             return newPoint;
-        } 
+        }
     }
 }

@@ -18,16 +18,16 @@ public class Lab3 {
     Set<T> curLevel = new HashSet();
     curLevel.add(source);
 
-    while(!curLevel.isEmpty()) {
+    while (!curLevel.isEmpty()) {
       Set<T> nextLevel = new HashSet();
 
-      for(T w : curLevel) {
+      for (T w : curLevel) {
         if (w.equals(dest)) {
           return distance;
         }
 
-        for(T n : g.neighbours(w)) {
-          if(!visited.contains(n)) {
+        for (T n : g.neighbours(w)) {
+          if (!visited.contains(n)) {
             visited.add(n);
             nextLevel.add(n);
           }

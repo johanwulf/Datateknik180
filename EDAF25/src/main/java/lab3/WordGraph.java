@@ -20,7 +20,7 @@ public class WordGraph implements Graph<String> {
   public WordGraph(Path wordfile, WordCriteria criteria) throws IOException {
     try (Reader in = Files.newBufferedReader(wordfile)) {
       Scanner scan = new Scanner(in);
-      while(scan.hasNext()) {
+      while (scan.hasNext()) {
         String word = scan.nextLine();
         graph.put(word, new HashSet<String>());
       }
@@ -29,28 +29,31 @@ public class WordGraph implements Graph<String> {
     }
 
     // TODO(D3): compute word neighbours (according to criteria).
-    for(Map.Entry<String, Set<String>> entry1 : graph.entrySet()) {
-      for(Map.Entry<String, Set<String>> entry2 : graph.entrySet()) {
-          if (criteria.adjacent(entry1.getKey(), entry2.getKey())) {
-            if(!entry1.getValue().contains(entry2.getKey())) {
-              Set<String> set = entry1.getValue();
-              set.add(entry2.getKey());
-              graph.put(entry1.getKey(), set);
-            }
+    for (Map.Entry<String, Set<String>> entry1 : graph.entrySet()) {
+      for (Map.Entry<String, Set<String>> entry2 : graph.entrySet()) {
+        if (criteria.adjacent(entry1.getKey(), entry2.getKey())) {
+          if (!entry1.getValue().contains(entry2.getKey())) {
+            Set<String> set = entry1.getValue();
+            set.add(entry2.getKey());
+            graph.put(entry1.getKey(), set);
           }
+        }
       }
     }
   }
 
-  @Override public int vertexCount() {
+  @Override
+  public int vertexCount() {
     return graph.size();
   }
 
-  @Override public Collection<String> vertexSet() {
+  @Override
+  public Collection<String> vertexSet() {
     return graph.keySet();
   }
 
-  @Override public Collection<String> neighbours(String v) {
+  @Override
+  public Collection<String> neighbours(String v) {
     return graph.getOrDefault(v, Collections.emptySet());
   }
 }

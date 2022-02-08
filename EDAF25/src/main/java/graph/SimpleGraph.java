@@ -14,7 +14,9 @@ import java.util.stream.IntStream;
 /**
  * A directed graph with a fixed number of vertices and edges.
  *
- * <p>Each vertex is represented by an integer from 0 to n-1, where n is the number of
+ * <p>
+ * Each vertex is represented by an integer from 0 to n-1, where n is the number
+ * of
  * vertices in the graph.
  * <p>
  * Edges are stored with adjacency lists for each vertex.
@@ -27,7 +29,8 @@ public class SimpleGraph implements Graph<Integer> {
    * Creates a graph with the edges listed in the second parameter.
    *
    * @param vertexCount number of vertices in the graph
-   * @param edges array of directed edges in the format {@code {{source, dest}}}
+   * @param edges       array of directed edges in the format {@code {{source,
+   *                    dest}}}
    */
   public SimpleGraph(int vertexCount, int[]... edges) {
     Preconditions.checkArgument(vertexCount >= 0, "vertex count must be non-negative");
@@ -49,15 +52,18 @@ public class SimpleGraph implements Graph<Integer> {
     }
   }
 
-  @Override public int vertexCount() {
+  @Override
+  public int vertexCount() {
     return vertexCount;
   }
 
-  @Override public Collection<Integer> vertexSet() {
+  @Override
+  public Collection<Integer> vertexSet() {
     return IntStream.range(0, vertexCount).boxed().collect(Collectors.toList());
   }
 
-  @Override public Collection<Integer> neighbours(Integer v) {
+  @Override
+  public Collection<Integer> neighbours(Integer v) {
     return Collections.unmodifiableSet(adjacent.getOrDefault(v, Collections.emptySet()));
   }
 

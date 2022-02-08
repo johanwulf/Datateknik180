@@ -9,22 +9,24 @@ public class Point {
 		this.y = y;
 	}
 
-	/** 
-	 * Returns the x coordinate. 
+	/**
+	 * Returns the x coordinate.
+	 * 
 	 * @return the x coordinate
 	 */
 	public int getX() {
 		return x;
 	}
 
-	/** 
-	 * Returns the y coordinate. 
+	/**
+	 * Returns the y coordinate.
+	 * 
 	 * @return the y coordinate
 	 */
 	public int getY() {
 		return y;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Point) {
@@ -37,7 +39,7 @@ public class Point {
 
 	@Override
 	public int hashCode() {
-	    return  31 * x + y;
+		return 31 * x + y;
 	}
-	
+
 }

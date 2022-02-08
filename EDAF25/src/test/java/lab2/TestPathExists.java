@@ -22,8 +22,8 @@ public class TestPathExists {
 
   @Test
   public final void testTwoVerticesPathExists1() {
-    Graph<Integer> g = new SimpleGraph(2, new int[][]{
-        {0, 1}, {1, 0},
+    Graph<Integer> g = new SimpleGraph(2, new int[][] {
+        { 0, 1 }, { 1, 0 },
     });
     assertThat(Lab2.pathExists(g, 0, 1)).isTrue();
     assertThat(Lab2.pathExists(g, 1, 0)).isTrue();
@@ -31,16 +31,16 @@ public class TestPathExists {
 
   @Test
   public final void testTwoVerticesPathExists2() {
-    Graph<Integer> g = new SimpleGraph(2, new int[][]{{1, 0}});
+    Graph<Integer> g = new SimpleGraph(2, new int[][] { { 1, 0 } });
     assertThat(Lab2.pathExists(g, 0, 1)).isFalse();
     assertThat(Lab2.pathExists(g, 1, 0)).isTrue();
   }
 
   @Test
   public final void testThreeVerticesPathsExist() {
-    Graph<Integer> g = new SimpleGraph(3, new int[][]{
-        {0, 1}, {1, 0},
-        {0, 2}, {2, 0},
+    Graph<Integer> g = new SimpleGraph(3, new int[][] {
+        { 0, 1 }, { 1, 0 },
+        { 0, 2 }, { 2, 0 },
     });
     assertThat(Lab2.pathExists(g, 0, 1)).isTrue();
     assertThat(Lab2.pathExists(g, 1, 2)).isTrue();
@@ -49,8 +49,8 @@ public class TestPathExists {
 
   @Test
   public final void testThreeVerticesNoPath() {
-    Graph<Integer> g = new SimpleGraph(3, new int[][]{
-        {1, 2}, {2, 1}
+    Graph<Integer> g = new SimpleGraph(3, new int[][] {
+        { 1, 2 }, { 2, 1 }
     });
     assertThat(Lab2.pathExists(g, 0, 1)).isFalse();
     assertThat(Lab2.pathExists(g, 0, 2)).isFalse();
@@ -59,12 +59,12 @@ public class TestPathExists {
 
   @Test
   public final void testFiveVerticesPathsExist() {
-    Graph<Integer> g = new SimpleGraph(5, new int[][]{
-        {0, 1}, {1, 0},
-        {0, 2}, {2, 0},
-        {1, 2}, {2, 1},
-        {0, 3}, {3, 0},
-        {3, 4}, {4, 3},
+    Graph<Integer> g = new SimpleGraph(5, new int[][] {
+        { 0, 1 }, { 1, 0 },
+        { 0, 2 }, { 2, 0 },
+        { 1, 2 }, { 2, 1 },
+        { 0, 3 }, { 3, 0 },
+        { 3, 4 }, { 4, 3 },
     });
     assertThat(Lab2.pathExists(g, 0, 1)).isTrue();
     assertThat(Lab2.pathExists(g, 1, 2)).isTrue();
@@ -75,11 +75,11 @@ public class TestPathExists {
 
   @Test
   public final void testFiveVerticesTwoComponents() {
-    Graph<Integer> g = new SimpleGraph(5, new int[][]{
-        {0, 1}, {1, 0},
-        {0, 2}, {2, 0},
-        {1, 2}, {2, 1},
-        {3, 4}, {4, 3},
+    Graph<Integer> g = new SimpleGraph(5, new int[][] {
+        { 0, 1 }, { 1, 0 },
+        { 0, 2 }, { 2, 0 },
+        { 1, 2 }, { 2, 1 },
+        { 3, 4 }, { 4, 3 },
     });
     assertThat(Lab2.pathExists(g, 0, 3)).isFalse();
     assertThat(Lab2.pathExists(g, 1, 3)).isFalse();
@@ -103,14 +103,14 @@ public class TestPathExists {
 
   @Test
   public final void test6() {
-    Graph<Integer> g = new SimpleGraph(8, new int[][]{
-        {0, 1}, {1, 0},
-        {1, 2}, {2, 1},
-        {2, 3}, {3, 2},
-        {2, 4}, {4, 2},
-        {2, 5}, {5, 2},
-        {4, 6}, {6, 4},
-        {5, 7}, {7, 5},
+    Graph<Integer> g = new SimpleGraph(8, new int[][] {
+        { 0, 1 }, { 1, 0 },
+        { 1, 2 }, { 2, 1 },
+        { 2, 3 }, { 3, 2 },
+        { 2, 4 }, { 4, 2 },
+        { 2, 5 }, { 5, 2 },
+        { 4, 6 }, { 6, 4 },
+        { 5, 7 }, { 7, 5 },
     });
     assertThat(Lab2.pathExists(g, 0, 6)).isTrue();
     assertThat(Lab2.pathExists(g, 0, 7)).isTrue();

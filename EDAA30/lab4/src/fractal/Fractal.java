@@ -1,9 +1,12 @@
 package fractal;
+
 public abstract class Fractal {
 	protected int order;
 
-	/** Construts a fractal object.
-	 * @param order the order of the fractal 
+	/**
+	 * Construts a fractal object.
+	 * 
+	 * @param order the order of the fractal
 	 */
 	public Fractal() {
 		order = 0;
@@ -11,33 +14,41 @@ public abstract class Fractal {
 
 	/**
 	 * Returns the title.
+	 * 
 	 * @return the title
 	 */
 	public abstract String getTitle();
 
-	/** Sets the order of the fractal to order.
+	/**
+	 * Sets the order of the fractal to order.
+	 * 
 	 * @param order the new order of the fractal
 	 */
 	public void setOrder(int order) {
 		this.order = order;
 	}
 
-	/** 
-	 * Returns the order of the fractal. 
-	 * @return the order of the fractal*/
-	public int getOrder(){
+	/**
+	 * Returns the order of the fractal.
+	 * 
+	 * @return the order of the fractal
+	 */
+	public int getOrder() {
 		return order;
 	}
 
 	/**
 	 * Returns a string representation of this fractal
+	 * 
 	 * @return a string representation of this fractal
 	 */
 	public String toString() {
 		return getTitle();
 	}
 
-	/** Draws the fractal.  
+	/**
+	 * Draws the fractal.
+	 * 
 	 * @param g the turtle graphic object
 	 */
 	public abstract void draw(TurtleGraphics g);

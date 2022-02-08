@@ -7,7 +7,7 @@ import drawing.*;
 
 public class BSTVisualizer {
 	private DrawingArea canvas;
-	
+
 	// width of empty tree (i.e. "null nodes")
 	private final static int EMPTY_TREE_WIDTH = 0; // = 1;
 	// diameter of nodes;
@@ -38,14 +38,14 @@ public class BSTVisualizer {
 			canvas.paint();
 		}
 	}
-	
+
 	/* ------ Private auxiliary methods -------------- */
 
 	private void calculateWidth(VNode root) {
-		if(root.node == null) {
+		if (root.node == null) {
 			root.width = EMPTY_TREE_WIDTH;
 		} else {
-			calculateWidth(root.left  = new VNode(root.node.left));
+			calculateWidth(root.left = new VNode(root.node.left));
 			calculateWidth(root.right = new VNode(root.node.right));
 			root.width = 1 + root.left.width + root.right.width;
 		}
@@ -56,9 +56,9 @@ public class BSTVisualizer {
 		buildVTree(root);
 		return root;
 	}
-	
+
 	private void buildVTree(VNode root) {
-		if(root.node != null) {
+		if (root.node != null) {
 			root.left = new VNode(root.node.left);
 			root.right = new VNode(root.node.right);
 		}
@@ -69,18 +69,18 @@ public class BSTVisualizer {
 		int xPos = computeXpos(col);
 		int yPos = computeYpos(level);
 		int childYpos = computeYpos(level + 1);
-		
+
 		if (vnode.left.node != null) {
-			int leftChildXpos = computeXpos(1+vnode.left.left.width+offset);
+			int leftChildXpos = computeXpos(1 + vnode.left.left.width + offset);
 			canvas.drawLine(Color.BLACK, xPos, yPos, leftChildXpos, childYpos);
 			drawTree(vnode.left, level + 1, offset);
 		}
 		if (vnode.node.right != null) {
-			int rightChildXpos = computeXpos(1+col+vnode.right.left.width);
+			int rightChildXpos = computeXpos(1 + col + vnode.right.left.width);
 			canvas.drawLine(Color.BLACK, xPos, yPos, rightChildXpos, childYpos);
 			drawTree(vnode.right, level + 1, col);
 		}
-		
+
 		String text = String.valueOf(vnode.node.element);
 		canvas.fillCircle(Color.BLUE, xPos, yPos, DIAMETER);
 		canvas.drawString(Color.BLACK, text, xPos + OFFSET, yPos + OFFSET);
@@ -95,16 +95,17 @@ public class BSTVisualizer {
 	private int computeXpos(int actNodeNbr) {
 		return actNodeNbr * (DIAMETER + HORIZONTAL_DIST);
 	}
-	
+
 	private static class VNode {
 		BinarySearchTree.BinaryNode<?> node;
 		VNode left;
 		VNode right;
 		int width;
+
 		public VNode(BinaryNode<?> node) {
 			this.node = node;
 		}
-		
+
 	}
 
 }

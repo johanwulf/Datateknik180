@@ -14,7 +14,8 @@ public class Edge {
     this.distance = distance;
   }
 
-  @Override public String toString() {
+  @Override
+  public String toString() {
     return String.format("%d -> %d [%s]", source, destination, distance);
   }
 }

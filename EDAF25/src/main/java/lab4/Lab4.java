@@ -22,40 +22,42 @@ class PQElement {
 
 public class Lab4 {
   /**
-   * Computes the shortest distance between start and end in the graph g using Dijkstra's
+   * Computes the shortest distance between start and end in the graph g using
+   * Dijkstra's
    * algorithm.
    * This version handles only graphs with integer edge distances.
-   * @param g a graph with distance information attached to the edges
+   * 
+   * @param g     a graph with distance information attached to the edges
    * @param start start vertex
-   * @param end end vertex
+   * @param end   end vertex
    * @return shortest distance between start and end
    */
   public static int distance(DistanceGraph g, int start, int end) {
     Comparator<PQElement> cmp = Comparator.comparingInt(e -> e.distance);
     PriorityQueue<PQElement> queue = new PriorityQueue<>(cmp);
     queue.add(new PQElement(start, 0));
-    
+
     Map<Integer, Integer> mappedValues = new HashMap<>();
     Set<Integer> visitedVertexes = new HashSet<>();
-    
+
     mappedValues.put(start, 0);
     visitedVertexes.add(start);
 
-    while(!queue.isEmpty()) {
+    while (!queue.isEmpty()) {
       PQElement temp = queue.poll();
       if (temp.node == end) {
         return temp.distance;
       } else {
-        for(Edge e : g.edges(temp.node)) {
+        for (Edge e : g.edges(temp.node)) {
           int w = e.destination;
           int newDistance = e.distance + temp.distance;
 
           int wDist = mappedValues.getOrDefault(w, Integer.MAX_VALUE);
-          
-          if(!visitedVertexes.contains(w) || newDistance < wDist) {
+
+          if (!visitedVertexes.contains(w) || newDistance < wDist) {
             queue.add(new PQElement(w, newDistance));
             visitedVertexes.add(w);
-          } 
+          }
         }
       }
     }
@@ -67,9 +69,10 @@ public class Lab4 {
    * Finds a shortest path between start and end in a graph g Dijkstra's
    * algorithm.
    * The graph can have any distance unit.
-   * @param g a graph with distance information attached to the edges
+   * 
+   * @param g     a graph with distance information attached to the edges
    * @param start start vertex
-   * @param end end vertex
+   * @param end   end vertex
    * @return a list containing the nodes on the shortest path from start to end
    */
   public static List<Integer> shortestPath(DistanceGraph g, int start, int end) {
@@ -91,17 +94,17 @@ public class Lab4 {
     }
 
     // Gå igenom hela queuen
-    while(!queue.isEmpty()) {
+    while (!queue.isEmpty()) {
       PQElement current = queue.poll();
 
-      if(current.node == end){
+      if (current.node == end) {
         int current_node = end;
         while (current_node != start) {
           answer.addFirst(current_node); // add first to list
           current_node = previousPath.get(current_node);
         }
         answer.addFirst(current_node); // add first to list
-        
+
         return answer;
       }
 
@@ -110,9 +113,9 @@ public class Lab4 {
         int newDist = current.distance + e.distance;
         int wDist = shortestPath.get(w);
         if (newDist < wDist) {
-            shortestPath.put(w, newDist);
-            queue.add(new PQElement(w, newDist));
-            previousPath.put(w, current.node);
+          shortestPath.put(w, newDist);
+          queue.add(new PQElement(w, newDist));
+          previousPath.put(w, current.node);
         }
       }
     }

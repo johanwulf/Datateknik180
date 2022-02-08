@@ -1,7 +1,8 @@
 package textproc;
 
 /**
- * Beskriver metoder för att behandla en sekvens av ord (som en bok), och därefter
+ * Beskriver metoder för att behandla en sekvens av ord (som en bok), och
+ * därefter
  * presentera ett resultat med statistik av något slag.
  */
 public interface TextProcessor {

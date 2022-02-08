@@ -9,19 +9,19 @@ public class CurrentUser {
      * The single instance of this class
      */
     private static CurrentUser instance;
-        
+
     /**
      * The name of the current user.
      */
     private String currentUserId;
-        
+
     /**
      * Create a CurrentUser object.
      */
     private CurrentUser() {
         currentUserId = null;
     }
-        
+
     /**
      * Returns the single instance of this class.
      *
@@ -32,7 +32,7 @@ public class CurrentUser {
             instance = new CurrentUser();
         return instance;
     }
-        
+
     /**
      * Check if a user has logged in.
      *
@@ -41,8 +41,8 @@ public class CurrentUser {
     public boolean isLoggedIn() {
         return currentUserId != null;
     }
-        
-    /** 
+
+    /**
      * Get the user id of the current user. Should only be called if
      * a user has logged in.
      *
@@ -51,7 +51,7 @@ public class CurrentUser {
     public String getCurrentUserId() {
         return currentUserId == null ? "<none>" : currentUserId;
     }
-        
+
     /**
      * A new user logs in.
      *

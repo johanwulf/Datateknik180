@@ -1,4 +1,5 @@
 # Datateknik180
+
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -22,26 +23,34 @@
 This repository contains the code which was made during my time at Lunds Tekniska Högskola, Campus Helsingborg. My degree is Bachelor of Science in Engineering, Computer Science and Engineering which is a three year degree.
 
 ## EDAA30
+
 ### Programmering i Java - fortsättningskurs
+
 This is the second Java course taken. The course further developed on the methods learned in the first course, EDAA10. Other than object oriented programming, we also learned about data structures and algorithms.
 
-* [Course website](http://cs.lth.se/edaa30/)
+- [Course website](http://cs.lth.se/edaa30/)
 
 ## EDAF25
+
 ### Objektorienterad modellering och design
+
 The part of this course that is in this repository contains graphs in Java.
 
-* [Course website](http://cs.lth.se/edaf25/)
+- [Course website](http://cs.lth.se/edaf25/)
 
 ## ETSF20
+
 ### Programvaruutveckling för Stora Projekt
+
 This course is aimed towards making us work on a project in a large group. We were tasked with creating a website where users could report their time in different projects.
 
-* [Course website](http://cs.lth.se/etsf20/)
-* [Our project groups document repository](https://github.com/puspgroup2/work-library)
+- [Course website](http://cs.lth.se/etsf20/)
+- [Our project groups document repository](https://github.com/puspgroup2/work-library)
 
 ## EDAF20
+
 ### Database Technology
+
 In this course we learned about databases, both in theory and in practice. We concentrated on relational databases, but also discussed NoSQL databases. We also used SQL to write Java programs that communicate with databases.
 
-* [Course website](http://cs.lth.se/edaf20-database-technology/)
+- [Course website](http://cs.lth.se/edaf20-database-technology/)

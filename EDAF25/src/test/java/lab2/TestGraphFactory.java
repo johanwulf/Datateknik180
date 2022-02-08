@@ -39,13 +39,15 @@ public class TestGraphFactory {
     return true;
   }
 
-  @Test public void testConnected() {
+  @Test
+  public void testConnected() {
     Graph<Integer> g = GraphFactory.buildConnected();
     assertThat(g.vertexCount()).isAtLeast(5);
     assertThat(connected(g)).isTrue();
   }
 
-  @Test public void testDisconnected() {
+  @Test
+  public void testDisconnected() {
     Graph<Integer> g = GraphFactory.buildDisconnected();
     assertThat(g.vertexCount()).isAtLeast(5);
     assertThat(connected(g)).isFalse();

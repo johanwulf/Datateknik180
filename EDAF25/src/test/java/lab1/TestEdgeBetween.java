@@ -8,18 +8,20 @@ import static com.google.common.truth.Truth.assertThat;
 
 public class TestEdgeBetween {
 
-  @Test public void singleEdge() {
-    Graph<Integer> g = new SimpleGraph(10, new int[][] {{4, 7}});
+  @Test
+  public void singleEdge() {
+    Graph<Integer> g = new SimpleGraph(10, new int[][] { { 4, 7 } });
     assertThat(Lab1.edgeBetween(g, 4, 7)).isTrue();
     assertThat(Lab1.edgeBetween(g, 7, 4)).isFalse();
   }
 
-  @Test public void simplePath() {
+  @Test
+  public void simplePath() {
     Graph<Integer> g = new SimpleGraph(5, new int[][] {
-        {0, 1},
-        {1, 2},
-        {2, 3},
-        {3, 4},
+        { 0, 1 },
+        { 1, 2 },
+        { 2, 3 },
+        { 3, 4 },
     });
     assertThat(Lab1.edgeBetween(g, 0, 1)).isTrue();
     assertThat(Lab1.edgeBetween(g, 1, 2)).isTrue();
@@ -35,13 +37,14 @@ public class TestEdgeBetween {
     assertThat(Lab1.edgeBetween(g, 4, 1)).isFalse();
   }
 
-  @Test public void loop() {
+  @Test
+  public void loop() {
     Graph<Integer> g = new SimpleGraph(5, new int[][] {
-        {0, 1},
-        {1, 2},
-        {2, 3},
-        {3, 4},
-        {4, 0}
+        { 0, 1 },
+        { 1, 2 },
+        { 2, 3 },
+        { 3, 4 },
+        { 4, 0 }
     });
     assertThat(Lab1.edgeBetween(g, 0, 1)).isTrue();
     assertThat(Lab1.edgeBetween(g, 1, 2)).isTrue();
@@ -57,10 +60,11 @@ public class TestEdgeBetween {
     assertThat(Lab1.edgeBetween(g, 4, 1)).isFalse();
   }
 
-  @Test public void notConnected() {
+  @Test
+  public void notConnected() {
     Graph<Integer> g = new SimpleGraph(5, new int[][] {
-      {0, 1},
-      {2, 3}
+        { 0, 1 },
+        { 2, 3 }
     });
     assertThat(Lab1.edgeBetween(g, 0, 1)).isTrue();
     assertThat(Lab1.edgeBetween(g, 2, 3)).isTrue();
@@ -68,7 +72,8 @@ public class TestEdgeBetween {
     assertThat(Lab1.edgeBetween(g, 1, 3)).isFalse();
   }
 
-  @Test public void emptyGraph() {
+  @Test
+  public void emptyGraph() {
     Graph<Integer> g = new SimpleGraph(5, new int[][] {});
     assertThat(Lab1.edgeBetween(g, 0, 1)).isFalse();
     assertThat(Lab1.edgeBetween(g, 2, 3)).isFalse();

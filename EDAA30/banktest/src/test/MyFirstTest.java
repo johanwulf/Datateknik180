@@ -1,9 +1,7 @@
 package test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import bank.BankAccount;
-
 import org.junit.jupiter.api.Test;
 
 class MyFirstTest {

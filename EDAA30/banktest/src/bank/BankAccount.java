@@ -24,9 +24,9 @@ public class BankAccount {
 	 * The specified amount is added to balance
 	 * 
 	 * @param n
-	 *            The amount to deposit
+	 *          The amount to deposit
 	 * @throws IllegalArgumentException
-	 *             if the specified amount is < 0
+	 *                                  if the specified amount is < 0
 	 */
 	public void deposit(int n) {
 		if (n < 0) {
@@ -41,9 +41,10 @@ public class BankAccount {
 	 * balance post: Balance is decreased by the specified amount
 	 * 
 	 * @param n
-	 *            The amount to withdraw
+	 *          The amount to withdraw
 	 * @throws IllegalArgumentException
-	 *             if the specified amount is < 0 or > balance of account
+	 *                                  if the specified amount is < 0 or > balance
+	 *                                  of account
 	 */
 	public void withdraw(int n) {
 		if (n < 0) {

@@ -13,12 +13,14 @@ import static com.google.common.truth.Truth.assert_;
 
 public class TestWordLadders {
 
-  @Test public void testWords1() throws IOException {
+  @Test
+  public void testWords1() throws IOException {
     WordGraph graph = loadGraph("words-1.txt");
     assertPath(graph, "varm", "kall", 4);
   }
 
-  @Test public void testWords2() throws IOException {
+  @Test
+  public void testWords2() throws IOException {
     WordGraph graph = loadGraph("words-2.txt");
     assertPath(graph, "green", "greet", 1);
     assertPath(graph, "greet", "great", 1);
@@ -27,7 +29,8 @@ public class TestWordLadders {
     assertPath(graph, "green", "brown", 6);
   }
 
-  @Test public void testWords3() throws IOException {
+  @Test
+  public void testWords3() throws IOException {
     WordGraph graph = loadGraph("words-3.txt");
     assertPath(graph, "green", "greet", 1);
     assertPath(graph, "greet", "great", 1);

@@ -5,7 +5,8 @@ import java.util.Collection;
 /**
  * A generic directed graph.
  *
- * <p>For a graph with n vertices, the  are numbered from 0 to n-1.
+ * <p>
+ * For a graph with n vertices, the are numbered from 0 to n-1.
  *
  * @param <T> the type of the vertex object in this graph
  */

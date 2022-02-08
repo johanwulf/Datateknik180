@@ -2,7 +2,6 @@ package testqueue;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -29,7 +28,7 @@ class TestFifoQueue {
 	}
 
 	@AfterEach
-	void tearDown(){
+	void tearDown() {
 		myIntQueue = null;
 		myStringQueue = null;
 	}
@@ -76,7 +75,7 @@ class TestFifoQueue {
 	 */
 	@Test
 	void testPollOfEmpty() {
-		assertEquals(null, myIntQueue.poll(), "Poll of empty queue should return null") ;
+		assertEquals(null, myIntQueue.poll(), "Poll of empty queue should return null");
 	}
 
 	/**
@@ -121,7 +120,7 @@ class TestFifoQueue {
 		myIntQueue.offer(2);
 		myIntQueue.poll();
 		myIntQueue.poll();
-		assertEquals(0,  myIntQueue.size(), "Wrong size after poll");
+		assertEquals(0, myIntQueue.size(), "Wrong size after poll");
 		assertTrue(myIntQueue.isEmpty(), "Queue not empty after poll");
 		myIntQueue.offer(3);
 		myIntQueue.offer(4);
@@ -178,18 +177,18 @@ class TestFifoQueue {
 
 		Iterator<Integer> itr1 = myIntQueue.iterator();
 		Iterator<Integer> itr2 = myIntQueue.iterator();
-		
+
 		for (int i = 1; i <= nbr; i++) {
 			assertTrue(itr1.hasNext(), "Wrong result from itr1.hasNext");
 			assertEquals(Integer.valueOf(i), itr1.next(), "Wrong result from itr1.next");
 		}
-		
+
 		for (int i = 1; i <= nbr; i++) {
 			assertEquals(Integer.valueOf(i), itr2.next(), "Wrong result from itr2.next");
 		}
 
 		// then, test a third iterator after the previous iterations
-		
+
 		Iterator<Integer> itr3 = myIntQueue.iterator();
 		for (int i = 1; i <= nbr; i++) {
 			assertTrue(itr3.hasNext(), "Wrong result from itr3.hasNext");

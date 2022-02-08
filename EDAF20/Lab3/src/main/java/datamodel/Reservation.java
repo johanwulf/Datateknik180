@@ -6,11 +6,11 @@ public class Reservation {
 	private String movieTitle;
 	private String performanceDate;
 	private String theatreName;
-	
+
 	public Reservation() {
 		this(-1, "N/A", "N/A", "N/A");
 	}
-	
+
 	// constructor
 	public Reservation(int bookingId, String movieTitle, String performanceDate, String theatreName) {
 		this.bookingId = bookingId;
@@ -23,15 +23,15 @@ public class Reservation {
 	public int getBookingId() {
 		return bookingId;
 	}
-	
+
 	public String getMovieTitle() {
 		return movieTitle;
 	}
-	
+
 	public String getPerformanceDate() {
 		return performanceDate;
 	}
-	
+
 	public String getTheatreName() {
 		return theatreName;
 	}

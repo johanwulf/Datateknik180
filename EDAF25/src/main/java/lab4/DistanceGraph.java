@@ -25,7 +25,7 @@ public class DistanceGraph implements Graph<Integer> {
    * Creates a graph with the edges listed in the second parameter.
    *
    * @param vertexCount number of vertices in the graph
-   * @param edges list of directed edges
+   * @param edges       list of directed edges
    */
   public DistanceGraph(int vertexCount, Edge... edges) {
     Preconditions.checkArgument(vertexCount >= 0, "vertex count must be non-negative");
@@ -57,15 +57,18 @@ public class DistanceGraph implements Graph<Integer> {
     return Collections.unmodifiableList(edges.getOrDefault(v, Collections.emptyList()));
   }
 
-  @Override public int vertexCount() {
+  @Override
+  public int vertexCount() {
     return vertexCount;
   }
 
-  @Override public Collection<Integer> vertexSet() {
+  @Override
+  public Collection<Integer> vertexSet() {
     return IntStream.range(0, vertexCount).boxed().collect(Collectors.toList());
   }
 
-  @Override public List<Integer> neighbours(Integer v) {
+  @Override
+  public List<Integer> neighbours(Integer v) {
     return edges.getOrDefault(v, Collections.emptyList())
         .stream()
         .map(edge -> edge.destination)
